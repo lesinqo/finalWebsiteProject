@@ -2,6 +2,7 @@ import React from "react";
 
 // reactstrap components
 import {
+  Button,
   Card,
   CardHeader,
   CardBody,
@@ -105,6 +106,10 @@ function Tabs() {
                     activeTab={"pills" + pills}
                   >
                     <TabPane tabId="pills1">
+                      <Button
+                        href="/top-lane">
+                        Top lane page
+                      </Button>
                       <p>
                         Top
                       </p>

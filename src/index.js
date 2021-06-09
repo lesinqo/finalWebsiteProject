@@ -31,6 +31,7 @@ import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import AboutUsPage from "views/examples/AboutUsPage.js";
+import Top from "views/role-pages/Top.js";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -59,6 +60,10 @@ ReactDOM.render(
         <Route
           path="/login-page"
           render={(props) => <LoginPage {...props} />}
+        />
+        <Route
+          path="/top-lane"
+          render={(props) => <Top {...props} />}
         />
         <Redirect to="/home" />
         <Redirect from="/" to="/home" />
