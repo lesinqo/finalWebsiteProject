@@ -107,7 +107,8 @@ function Tabs() {
                   >
                     <TabPane tabId="pills1">
                       <Button
-                        href="/top-lane">
+                        href="/top-lane"
+                      >
                         Top lane page
                       </Button>
                       <p>
