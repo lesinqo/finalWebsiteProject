@@ -43,7 +43,7 @@ function Index() {
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
-
+        <Tabs />
         </div>
         <DarkFooter />
       </div>
