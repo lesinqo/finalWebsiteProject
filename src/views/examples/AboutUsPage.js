@@ -3,10 +3,6 @@ import React from "react";
 // reactstrap components
 import {
   Button,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col,
@@ -24,8 +20,6 @@ import DarkFooter from "components/Footers/DarkFooter.js";
 
 function AboutUsPage() {
   const [modal2, setModal2] = React.useState(false);
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");

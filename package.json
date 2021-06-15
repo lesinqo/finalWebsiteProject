@@ -3,8 +3,10 @@
   "version": "1.5.0",
   "private": true,
   "dependencies": {
+    "cors": "^2.8.5",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.9",
+    "lol-web-scrapper": "^1.0.5",
     "moment": "2.29.1",
     "node-sass": "6.0.0",
     "nouislider": "15.1.0",

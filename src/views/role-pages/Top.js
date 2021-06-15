@@ -6,7 +6,6 @@ import TopLaneHeader from "components/Headers/TopLaneHeader.js";
 import DarkFooter from "components/Footers/DarkFooter.js";
 
 import {
-  Button,
   Card,
   CardHeader,
   CardBody,
@@ -21,9 +20,6 @@ import {
 } from "reactstrap";
 
 function AboutUsPage() {
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);  
-  const [iconPills, setIconPills] = React.useState("1");
   const [pills, setPills] = React.useState("1");
   React.useEffect(() => {
     document.body.classList.add("landing-page");
@@ -59,7 +55,7 @@ function AboutUsPage() {
                     <NavItem>
                       <NavLink
                         className={pills === "1" ? "active" : ""}
-                        href="#pablo"
+                        href="#tank"
                         onClick={(e) => {
                           e.preventDefault();
                           setPills("1");
@@ -71,8 +67,11 @@ function AboutUsPage() {
                     <NavItem>
                       <NavLink
                         className={pills === "2" ? "active" : ""}
-                        href="#pablo"
+                        href="#mage"
                         onClick={(e) => {
+                          let winrate = "0";
+                          document.getElementById("akaliTitle").innerHTML = "Akali";
+
                           e.preventDefault();
                           setPills("2");
                         }}
@@ -83,7 +82,7 @@ function AboutUsPage() {
                     <NavItem>
                       <NavLink
                         className={pills === "3" ? "active" : ""}
-                        href="#pablo"
+                        href="#assassin"
                         onClick={(e) => {
                           e.preventDefault();
                           setPills("3");
@@ -105,8 +104,9 @@ function AboutUsPage() {
                     <TabPane tabId="pills2">
                     <Col>
                         <Row>
-                          <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a5/AkaliSquare.png"></img>
-                          pog
+                          <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a5/AkaliSquare.png" alt="idk"></img>
+                          <p id="akaliTitle"></p>
+                          <p id="akaliWinrate"></p>
                         </Row>
                       </Col>
                     </TabPane>
