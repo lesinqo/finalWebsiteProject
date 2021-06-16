@@ -10,21 +10,19 @@ function DarkFooter() {
       <Container>
         <nav>
           <ul>
-            <li>
               <a
-                href="/about-us"
+                href="/about-derek"
               >
-                About Us
+                About Derek
               </a>
-            </li>
-            <li>
-              <a
+          </ul>
+          <ul>
+          <a
                 href="https://maestroderek.github.io/"
                 target="_blank"
               >
                 Blog
               </a>
-            </li>
           </ul>
         </nav>
         <div className="copyright" id="copyright">

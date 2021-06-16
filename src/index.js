@@ -23,28 +23,33 @@ import "assets/css/nucleo-icons.css";
 import "assets/scss/blk-design-system-react.scss?v=1.2.0";
 import "assets/demo/demo.css";
 
-import Index from "views/Index.js";
-import LandingPage from "views/examples/LandingPage.js";
-import RegisterPage from "views/examples/RegisterPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
+import Index from "pages/Index.js";
+import AboutUsPage from "pages/AboutUsPage.js";
+import AccomplishmentsPage from "pages/AccomplishmentsPage.js";
+import ProjectsPage from "pages/ProjectsPage.js";
+import AboutWebsitePage from "pages/AboutWebsite.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/components" render={(props) => <Index {...props} />} />
+      <Route path="/home" render={(props) => <Index {...props} />} />
       <Route
-        path="/landing-page"
-        render={(props) => <LandingPage {...props} />}
+        path="/accomplishments"
+        render={(props) => <AccomplishmentsPage {...props} />}
       />
       <Route
-        path="/register-page"
-        render={(props) => <RegisterPage {...props} />}
+        path="/about-derek"
+        render={(props) => <AboutUsPage {...props} />}
       />
       <Route
-        path="/profile-page"
-        render={(props) => <ProfilePage {...props} />}
+        path="/about-website"
+        render={(props) => <AboutWebsitePage {...props} />}
       />
-      <Redirect from="/" to="/components" />
+      <Route
+        path="/projects"
+        render={(props) => <ProjectsPage {...props} />}
+      />
+      <Redirect from="/" to="/home" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
