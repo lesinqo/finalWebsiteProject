@@ -1,15 +1,7 @@
 import React from "react";
 
-// reactstrap components
-import {
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
-
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import AboutUsHeader from "components/Headers/AboutUsHeader.js";
 import DarkFooter from "components/Footers/DarkFooter.js";
 
 function AboutUsPage() {

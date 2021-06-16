@@ -1,6 +1,7 @@
 
 import React from "react";
 import {
+  Button,
   Row,
   Col,
 } from "reactstrap";
@@ -53,16 +54,33 @@ export default function LandingPage() {
             src={require("assets/img/cercuri.png").default}
           />
           <div className="content-center">
-            <Row className="row-grid justify-content-between align-items-center text-left">
-              <Col lg="6" md="6">
-                <h1 className="text-white">
+                <h1 className="text-white text-center">
                   Projects
                 </h1>
-                <p className="text-white mb-3">
-                  Add stuff here...
-                </p>
-              </Col>
-            </Row>
+                <br></br>
+                <h2 className="text-white text-left">
+                  <Button
+                    href="https://github.com/esspee39/Project_2_Gumball_Proxy">
+                    Gumball Proxy Project
+                  </Button>
+                  <p>This was an assignment for my OOD class. I worked on a team using a proxy pattern to ping and get status of a gumball machine through Docker.</p>
+                </h2>
+                <br></br>
+                <h2 className="text-white text-left">
+                  <Button
+                    href="https://github.com/MaestroDerek/discord-randomizer">
+                    Discord Randomizer Bot
+                  </Button>
+                  <p>This was a fun project with a friend. It is simply just a bot that takes in a parameter and returns something random based on that.</p>
+                </h2>
+                <br></br>
+                <h2 className="text-white text-left">
+                  <Button
+                    href="https://github.com/MaestroDerek/Turnbasedgame">
+                    My first ever C++ Project.
+                  </Button>
+                  <p>This is not impressive at all. It is; however, a good memory first learning C++.</p>
+                </h2>
           </div>
         </div>
         <Footer />
