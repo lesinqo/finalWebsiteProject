@@ -1,54 +1,68 @@
-import React from "react";
+/*!
 
-// reactstrap components
-// import {
-// } from "reactstrap";
+=========================================================
+* BLK Design System React - v1.2.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/blk-design-system-react
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+import React from "react";
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import IndexHeader from "components/Headers/IndexHeader.js";
-import DarkFooter from "components/Footers/DarkFooter.js";
+import PageHeader from "components/PageHeader/PageHeader.js";
+import Footer from "components/Footer/Footer.js";
 
-// sections for this page
-// import Images from "./index-sections/Images.js";
-// import BasicElements from "./index-sections/BasicElements.js";
-// import Navbars from "./index-sections/Navbars.js";
-import Tabs from "./index-sections/Tabs.js";
-// import Pagination from "./index-sections/Pagination.js";
-// import Notifications from "./index-sections/Notifications.js";
-// import Typography from "./index-sections/Typography.js";
-// import Javascript from "./index-sections/Javascript.js";
-// import Carousel from "./index-sections/Carousel.js";
-// import NucleoIcons from "./index-sections/NucleoIcons.js";
-// import CompleteExamples from "./index-sections/CompleteExamples.js";
-// import SignUp from "./index-sections/SignUp.js";
-// import Examples from "./index-sections/Examples.js";
-// import Download from "./index-sections/Download.js";
+// sections for this page/view
+import Basics from "views/IndexSections/Basics.js";
+import Navbars from "views/IndexSections/Navbars.js";
+import Tabs from "views/IndexSections/Tabs.js";
+import Pagination from "views/IndexSections/Pagination.js";
+import Notifications from "views/IndexSections/Notifications.js";
+import Typography from "views/IndexSections/Typography.js";
+import JavaScript from "views/IndexSections/JavaScript.js";
+import NucleoIcons from "views/IndexSections/NucleoIcons.js";
+import Signup from "views/IndexSections/Signup.js";
+import Examples from "views/IndexSections/Examples.js";
+import Download from "views/IndexSections/Download.js";
 
-function Index() {
+export default function Index() {
   React.useEffect(() => {
-    document.body.classList.add("index-page");
-    document.body.classList.add("sidebar-collapse");
-    document.documentElement.classList.remove("nav-open");
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
+    document.body.classList.toggle("index-page");
+    // Specify how to clean up after this effect:
     return function cleanup() {
-      document.body.classList.remove("index-page");
-      document.body.classList.remove("sidebar-collapse");
+      document.body.classList.toggle("index-page");
     };
-  });
+  },[]);
   return (
     <>
       <IndexNavbar />
       <div className="wrapper">
-        <IndexHeader />
+        <PageHeader />
         <div className="main">
-        <Tabs />
+          <Basics />
+          <Navbars />
+          <Tabs />
+          <Pagination />
+          <Notifications />
+          <Typography />
+          <JavaScript />
+          <NucleoIcons />
+          <Signup />
+          <Examples />
+          <Download />
         </div>
-        <DarkFooter />
+        <Footer />
       </div>
     </>
   );
 }
-
-export default Index;

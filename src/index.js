@@ -1,14 +1,14 @@
-/*
+/*!
 
 =========================================================
-* Now UI Kit React - v1.5.0
+* BLK Design System React - v1.2.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/now-ui-kit-react
-* Copyright 2021 Creative Tim (http://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-kit-react/blob/main/LICENSE.md)
+* Product Page: https://www.creative-tim.com/product/blk-design-system-react
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
 
-* Designed by www.invisionapp.com Coded by www.creative-tim.com
+* Coded by Creative Tim
 
 =========================================================
 
@@ -19,55 +19,32 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-// styles for this kit
-import "assets/css/bootstrap.min.css";
-import "assets/scss/now-ui-kit.scss?v=1.5.0";
-import "assets/demo/demo.css?v=1.5.0";
-import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
-// pages for this kit
+import "assets/css/nucleo-icons.css";
+import "assets/scss/blk-design-system-react.scss?v=1.2.0";
+import "assets/demo/demo.css";
+
 import Index from "views/Index.js";
-import NucleoIcons from "views/NucleoIcons.js";
-import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
+import RegisterPage from "views/examples/RegisterPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
-import AboutUsPage from "views/examples/AboutUsPage.js";
-import Top from "views/role-pages/Top.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Switch>
-        <Route 
-          path="/home" 
-          render={(props) => <Index {...props} />}
-        />
-        <Route 
-          path="/about-us" 
-          render={(props) => <AboutUsPage {...props} />}
-        />
-        <Route
-          path="/nucleo-icons"
-          render={(props) => <NucleoIcons {...props} />}
-        />
-        <Route
-          path="/landing-page"
-          render={(props) => <LandingPage {...props} />}
-        />
-        <Route
-          path="/profile-page"
-          render={(props) => <ProfilePage {...props} />}
-        />
-        <Route
-          path="/login-page"
-          render={(props) => <LoginPage {...props} />}
-        />
-        <Route
-          path="/top-lane"
-          render={(props) => <Top {...props} />}
-        />
-        <Redirect to="/home" />
-        <Redirect from="/" to="/home" />
-      </Switch>
+      <Route path="/components" render={(props) => <Index {...props} />} />
+      <Route
+        path="/landing-page"
+        render={(props) => <LandingPage {...props} />}
+      />
+      <Route
+        path="/register-page"
+        render={(props) => <RegisterPage {...props} />}
+      />
+      <Route
+        path="/profile-page"
+        render={(props) => <ProfilePage {...props} />}
+      />
+      <Redirect from="/" to="/components" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

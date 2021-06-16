@@ -1,75 +1,105 @@
 # Change Log
 
-## [1.5.0] 2021-05-19
+## [1.2.0] 2020-12-08
+### Enhancements
+- **Full Hooks Support**: Change `class` components usage with `functional` ones in order to support Hooks
 ### Bug fixing
+### Misc
+- Add new branch, named `main`, this will replace the `master` branch
 ### Major style changes
+- Remove `src/assets/scss/blk-design-system-react/bootstrap` folder and start using the `node_modules/bootstrap` one
+- Add `src/assets/scss/blk-design-system-react/react/_custom-forms.scss` for usage of Bootstrap Switch / Reactstrap CustomInput of type switch
 ### Deleted components
 ### Added components
 ### Deleted dependencies
+- react-bootstrap-switch
+  - This project was not longer maintained, and it had issues with the new React version. The styles for it are still kept inside the product, but we do not recommended using the plugin anymore. You can use the simple Reactstrap CustomInput of type switch or the basic HTML Bootstrap Switch one.
+- eslint-plugin-flowtype
 ### Added dependencies
-- `@babel/core@7.14.3` (to stop warnings on install)
+```
+"@testing-library/jest-dom": "5.11.6",
+"@testing-library/react": "11.2.2",
+"@testing-library/user-event": "12.2.2",
+"bootstrap": "4.5.3",
+"jquery": "3.5.1",
+"node-sass-package-importer": "5.3.2",
+"web-vitals": "1.0.1"
+```
 ### Updated dependencies
 ```
-gulp-append-prepend     1.0.8   →    1.0.9
-moment                 2.26.0   →   2.29.1
-node-sass              4.14.1   →    6.0.0
-nouislider             14.5.0   →   15.1.0
-react                 16.13.1   →   17.0.2
-react-datetime         2.16.3   →    3.0.4
-react-dom             16.13.1   →   17.0.2
-react-scripts           3.4.1   →    4.0.3
-reactstrap              8.4.1   →    8.9.0
-typescript              3.9.5   →    4.2.4
+chart.js                   2.9.3   →    2.9.4
+moment                    2.24.0   →   2.29.1
+node-sass                 4.13.1   →   4.14.1
+nouislider                14.2.0   →   14.6.3
+react                    16.13.1   →   17.0.1
+react-chartjs-2            2.9.0   →   2.11.1
+react-datetime            2.16.3   →    3.0.4
+react-dom                16.13.1   →   17.0.1
+react-router-dom           5.1.2   →    5.2.0
+react-scripts              3.4.1   →    4.0.1
+reactstrap                 8.4.1   →    8.7.1
+typescript                 3.8.3   →    4.1.2
 ```
+### Important Notes
+**The jQuery and TypeScript dependencies are installed only to stop console warnings on install. They are not actually used in our product. So the product is not based on jQuery, and it is not based on TypeScript!**
 ### Warning
-_While in development some of the plugins that were used for this product will throw some warnings - note, this only happens in development, the UI or the functionality of the product is not affected, also, if the issues will persist in React 17, we'll drop usage of those plugins, and replace them with other ones._
-_Warnings might appear while doing an npm install - they do not affect the UI or the functionality of the product, and they appear because of NodeJS and not from the product itself._
+_Some warnings may appear when running the installation command, but they do not affect the UI or the functionality of the product._
+_The following warnings will appear when running the installation command, but they do not affect the UI or the functionality of the product (they will be solved in our next update):_
 ```
 npm WARN react-datetime@3.0.4 requires a peer of react@^16.5.0 but none is installed. You must install peer dependencies yourself.
+npm WARN react-popper@1.3.7 requires a peer of react@0.14.x || ^15.0.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN create-react-context@0.3.0 requires a peer of react@^0.14.0 || ^15.0.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.
 ```
-_In our next update we'll replace this plugin with something else to stop these._
-_You will also have the following message: found 80 vulnerabilities (1 low, 79 moderate). This comes from react-scripts, and will be fixed in the next version. NOTE: the product works as expected with these vulnerabilities._
 
-## [1.4.0] 2020-06-15
+## [1.1.0] 2020-04-10
 ### Bug fixing
-- Other Now UI React products
-  - https://github.com/creativetimofficial/ct-now-ui-dashboard-pro-react/issues/10 (added `window.scrollTo(0, 0)` and `document.body.scrollTop = 0` to all pages so when you navigate to new page you are sent to the first line of the page)
-  - https://github.com/creativetimofficial/ct-now-ui-dashboard-pro-react/issues/31 (changed the fonts import to `~assets/fonts` and also added assets path inside `jsconfig.json` file)
-  - https://github.com/creativetimofficial/ct-now-ui-kit-pro-react/issues/2 (added warnings on the documentation about this issue - unfortunately, we need to keep our own homepage prop inside the package.json for copyright issues)
-  - https://github.com/creativetimofficial/now-ui-dashboard-react/issues/10
+- Github
+  - https://github.com/creativetimofficial/blk-design-system-react/issues/8
+  - https://github.com/creativetimofficial/blk-design-system-react/issues/7
+  - https://github.com/creativetimofficial/blk-design-system-react/issues/5
+  - https://github.com/creativetimofficial/blk-design-system-react/issues/4
+  - https://github.com/creativetimofficial/blk-design-system-react/issues/2
+  - https://github.com/creativetimofficial/blk-design-system-react/issues/1
 ### Major style changes
-- `src/assets/scss/now-ui-kit/_nucleo-outline.scss` (changed the fonts import to `~assets/fonts` and also added assets path inside `jsconfig.json` file)
-- `src/assets/scss/now-ui-kit/_variables.scss` (changed the fonts import to `~assets/fonts` and also added assets path inside `jsconfig.json` file)
-- `src/assets/scss/react/now-ui-kit/_popovers.scss` (because of new bootstrap and reactstrap versions)
-- `src/assets/scss/react/now-ui-kit/_tooltips.scss` (because of new bootstrap and reactstrap versions)
-- `src/assets/scss/react/react-differences.scss` (to add the new tootlips styles)
+- `src/assets/scss/blk-design-system-react/react/plugins/_plugin-nouislider.scss`
 ### Deleted components
 ### Added components
 ### Deleted dependencies
 ### Added dependencies
-+ gulp@4.0.2 (for Creative Tim copyrights)
-+ gulp-append-prepend@1.0.8 (for Creative Tim copyrights)
++ eslint-plugin-flowtype@3.13.0 (to stop terminal/cmd warnings)
++ typescript@3.8.3 (to stop terminal/cmd warnings)
 ### Updated dependencies
 ```
-moment             2.24.0   →    2.26.0
-node-sass          4.12.0   →    4.14.1
-nouislider         14.0.2   →    14.5.0
-react              16.8.6   →   16.13.1
-react-dom          16.8.6   →   16.13.1
-react-router        5.0.1   →     5.2.0
-react-router-dom    5.0.1   →     5.2.0
-react-scripts       3.0.1   →     3.4.1
-reactstrap          8.0.1   →     8.4.1
-typescript          3.5.3   →     3.9.5
+chart.js             2.7.3   →     2.9.3
+node-sass           4.11.0   →    4.13.1
+nouislider          13.1.1   →    14.2.0
+perfect-scrollbar    1.4.0   →     1.5.0
+react               16.8.3   →   16.13.1
+react-chartjs-2      2.7.4   →     2.9.0
+react-dom           16.8.3   →   16.13.1
+react-router-dom     4.3.1   →     5.1.2
+react-scripts        2.1.5   →     3.4.1
+reactstrap           7.1.0   →     8.4.1
 ```
 ### Warning
-_All the following products: Now UI Kit React, Now UI Dashboard React, Now UI Kit PRO React and Now UI Dashboard PRO React have been updated together, and thus, we've added to all of them the same version of 1.4.0 - we may have skipped some versions for some of the above products, we've done so, since we want all Now UI & React products to share the same versions._
-_While in development some of the plugins that were used for this product will throw some warnings - note, this only happens in development, the UI or the functionality of the product is not affected, also, if the issues will persist in React 17, we'll drop usage of those plugins, and replace them with other ones._
-_Warnings might appear while doing an npm install - they do not affect the UI or the functionality of the product, and they appear because of NodeJS and not from the product itself._
+**The following warnings may appear when running the installation command, but they do not affect the UI or the functionality of the product:**
+```
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated popper.js@1.16.1: Popper changed home, find its new releases at @popperjs/core
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+```
+**The folowing components make react throw errors for using life-cycle methods that will be dropped in React 17.x: react-datetime, react-bootstrap-switch. But the UI or functionality of the product is not affected. When we'll update the product to React 17.x, if the issue will persist, we'll drop support for these components and replace them with other ones that create the same or a similar UI. Also, the warnings are only present in the development, and not in production.**
+```
+Warning: componentWillReceiveProps has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
 
-## [1.0.0] 2019-07-23
+* Move data fetching code or side effects to componentDidUpdate.
+* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://fb.me/react-derived-state
+* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: DateTime, Switch
+```
+
+## [1.0.0] 2019-03-04
 ### Original Release
-- Started project with create-react-app
 - Added Reactstrap as base framework
-- Added design from Now UI Kit by Creative Tim
-- Added React Hooks
+- Added design from BLK Design System by Creative Tim
