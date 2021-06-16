@@ -62,15 +62,6 @@ export default function IndexNavbar() {
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
             Designed and Coded by Derek and Abdullah
           </UncontrolledTooltip>
-          <button
-            aria-expanded={collapseOpen}
-            className="navbar-toggler navbar-toggler"
-            onClick={toggleCollapse}
-          >
-            <span className="navbar-toggler-bar bar1" />
-            <span className="navbar-toggler-bar bar2" />
-            <span className="navbar-toggler-bar bar3" />
-          </button>
         </div>
         <Collapse
           className={"justify-content-end " + collapseOut}
@@ -79,17 +70,6 @@ export default function IndexNavbar() {
           onExiting={onCollapseExiting}
           onExited={onCollapseExited}
         >
-          <div className="navbar-collapse-header">
-            <Row>
-              <Col className="collapse-brand" xs="6">
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  BLK•React
-                </a>
-              </Col>
-              <Col className="collapse-close text-right" xs="6">
-              </Col>
-            </Row>
-          </div>
           <Nav navbar>
             <UncontrolledDropdown nav>
               <DropdownToggle
