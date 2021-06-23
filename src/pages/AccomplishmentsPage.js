@@ -59,7 +59,7 @@ export default function LandingPage() {
                   Accomplishments
                 </h1>
                 <p className="text-white mb-3">
-                                  University of Rio Grande (06/01/2018)
+                University of Rio Grande (06/01/2018)
                 AAS IT:Networking Systems
 
                 Rowan College at Burlington County (06/01/2020)
